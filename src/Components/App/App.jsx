@@ -1,13 +1,18 @@
 import { RouterProvider } from "react-router-dom";
-
-import "./App.css";
 import Pages from "../Router/Router";
+import { Box } from "@mui/material";
 
 function App() {
   return (
-    <div className="App">
+    <Box
+      sx={{
+        height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       <RouterProvider router={Pages()} />
-    </div>
+    </Box>
   );
 }
 

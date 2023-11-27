@@ -1,13 +1,17 @@
+import { Box, ThemeProvider } from "@mui/material";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
+import Theme from "../Theme/Theme";
 
 const Layout = ({ children }) => {
   return (
-    <div className="Layout">
-      <Header />
-      <main>{children}</main>
-      <Footer />
-    </div>
+    <ThemeProvider theme={Theme()}>
+      <Box sx={{ height: "100%" }}>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </Box>
+    </ThemeProvider>
   );
 };
 

@@ -1,33 +1,50 @@
 import { Link } from "react-router-dom";
 import "./NavBar.css";
+import { Box } from "@mui/material";
+import Theme from "../Theme/Theme";
 
 const NavBar = () => {
+  const linkColor = Theme();
+  const linkStyle = {
+    textDecoration: "none",
+    color: linkColor.palette.color.primary,
+  };
   return (
-    <nav className="NavBar">
-      <div className="NavBar-pages">
+    <Box sx={{ marginTop: "20px" }} className="NavBar">
+      <Box className="NavBar-pages">
         <ul>
           <li>
-            <Link to={`/`}>Home</Link>
+            <Link style={linkStyle} to={`/`}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link to={`/products`}>Products</Link>
+            <Link style={linkStyle} to={`/products`}>
+              Products
+            </Link>
           </li>
           <li>
-            <Link to={`/login`}>Log in</Link>
+            <Link style={linkStyle} to={`/login`}>
+              Log in
+            </Link>
           </li>
           <li>
-            <Link to={`/register`}>Register</Link>
+            <Link style={linkStyle} to={`/register`}>
+              Register
+            </Link>
           </li>
         </ul>
-      </div>
-      <div className="NavBar-Card">
+      </Box>
+      <Box className="NavBar-Card">
         <ul>
           <li>
-            <Link to={`/card`}>Card</Link>
+            <Link style={linkStyle} to={`/card`}>
+              Card
+            </Link>
           </li>
         </ul>
-      </div>
-    </nav>
+      </Box>
+    </Box>
   );
 };
 

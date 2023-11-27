@@ -1,12 +1,17 @@
+import { Box, ThemeProvider } from "@mui/material";
 import Layout from "../../Components/Layout/Layout";
+import RegisterForm from "../../Container/RegisterForm/RegisterForm";
+import Theme from "../../Components/Theme/Theme";
 
 const RegisterPage = () => {
   return (
-    <div className="RegisterPage">
+    <ThemeProvider theme={Theme()}>
       <Layout>
-        <p>Register Page!</p>
+        <Box>
+          <RegisterForm />
+        </Box>
       </Layout>
-    </div>
+    </ThemeProvider>
   );
 };
 

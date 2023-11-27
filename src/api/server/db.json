@@ -1,16 +1,17 @@
 {
-  "users": [
+  "admins": [
     {
-      "id": "1",
+      "id": 1,
       "username": "Mehrdadrd",
       "Password": "m215",
       "rememberME": true
     },
     {
-      "id": "2",
+      "id": 2,
       "username": "Farhadpk",
       "Password": "f215",
       "rememberME": false
     }
-  ]
+  ],
+  "registered": []
 }
