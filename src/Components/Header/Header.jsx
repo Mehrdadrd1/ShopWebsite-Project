@@ -11,7 +11,7 @@ const Header = () => {
           display: "flex",
           padding: "5px",
           flexDirection: "column",
-          bgcolor: "color.quaternary",
+          bgcolor: "color.primary",
         }}
       >
         <Typography variant="h4" sx={{ textAlign: "center" }}>

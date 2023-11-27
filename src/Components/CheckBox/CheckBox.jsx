@@ -7,13 +7,17 @@ const CheckBox = () => {
     <Box
       sx={{
         display: "flex",
-        flexDirection: "row-reverse",
-        justifyContent: "center",
+        flexDirection: "row",
         alignItems: "center",
+        mr: "10px",
       }}
     >
+      <Checkbox
+        sx={{
+          padding: "0px",
+        }}
+      />
       <label htmlFor="Checkbox">Remember ME</label>
-      <Checkbox />
     </Box>
   );
 };

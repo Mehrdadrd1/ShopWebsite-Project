@@ -21,6 +21,8 @@ const HomePage = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            bgcolor: "color.quaternary",
+            color: "color.primary",
           }}
         >
           <Typography sx={{ mt: "30px" }} variant="h3">

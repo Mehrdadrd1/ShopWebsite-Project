@@ -7,7 +7,12 @@ const RegisterPage = () => {
   return (
     <ThemeProvider theme={Theme()}>
       <Layout>
-        <Box>
+        <Box
+          sx={{
+            bgcolor: "color.quaternary",
+            textAlign: "center",
+          }}
+        >
           <RegisterForm />
         </Box>
       </Layout>

@@ -12,8 +12,8 @@ root.render(
     <ThemeProvider theme={Theme()}>
       <Box
         sx={{
-          bgcolor: "background.paper",
-          color: "color.primary",
+          bgcolor: "color.primary",
+          color: "background.paper",
         }}
       >
         <App />

@@ -14,9 +14,10 @@ const Buttons = ({ onClick, children, type, id, disabled }) => {
         onClick={onClick}
         sx={{
           textDecoration: "none",
-          bgcolor: "color.primary",
+          bgcolor: "color.tertiary",
           ":hover": { bgcolor: "color.scondary" },
           width: "fit-content",
+          margin: "10px",
         }}
       >
         {children}

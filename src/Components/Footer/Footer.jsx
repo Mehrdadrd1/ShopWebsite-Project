@@ -11,7 +11,7 @@ const Footer = () => {
         position: "relative",
         bottom: 0,
         width: "100%",
-        bgcolor: "color.quaternary",
+        bgcolor: "color.primary",
       }}
     >
       <Typography sx={{}} variant="button" display="block" gutterBottom>
