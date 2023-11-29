@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
-
+import Theme from "../Theme/Theme";
 const Footer = () => {
+  const theme = Theme();
   return (
     <Box
       sx={{
@@ -8,10 +9,7 @@ const Footer = () => {
         flexDirection: "row",
         justifyContent: "space-between",
         padding: "5px",
-        position: "relative",
-        bottom: 0,
-        width: "100%",
-        bgcolor: "color.primary",
+        bgcolor: theme.palette.color.scondary,
       }}
     >
       <Typography sx={{}} variant="button" display="block" gutterBottom>

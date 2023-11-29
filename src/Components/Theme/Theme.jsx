@@ -4,10 +4,10 @@ const Theme = () => {
   const theme = createTheme({
     palette: {
       background: {
-        paper: "#eeeeee",
+        paper: "#393646",
       },
       color: {
-        primary: "#393646",
+        primary: "#eeeeee",
         scondary: "#443c68",
         tertiary: "#576cbc",
         quaternary: "#9bc5ef",

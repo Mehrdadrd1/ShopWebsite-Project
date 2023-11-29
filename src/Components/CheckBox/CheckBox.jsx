@@ -1,7 +1,9 @@
 import Checkbox from "@mui/material/Checkbox";
 import { Box } from "@mui/material";
+import Theme from "../Theme/Theme";
 
 const CheckBox = () => {
+  const theme = Theme();
   const label = { inputProps: { "aria-label": "Checkbox demo" } };
   return (
     <Box
@@ -17,7 +19,12 @@ const CheckBox = () => {
           padding: "0px",
         }}
       />
-      <label htmlFor="Checkbox">Remember ME</label>
+      <label
+        htmlFor="Checkbox"
+        style={{ color: theme.palette.background.paper }}
+      >
+        Remember ME
+      </label>
     </Box>
   );
 };

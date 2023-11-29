@@ -9,7 +9,6 @@ const RegisterPage = () => {
       <Layout>
         <Box
           sx={{
-            bgcolor: "color.quaternary",
             textAlign: "center",
           }}
         >

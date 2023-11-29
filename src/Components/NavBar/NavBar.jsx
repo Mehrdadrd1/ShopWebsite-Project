@@ -7,7 +7,7 @@ const NavBar = () => {
   const linkColor = Theme();
   const linkStyle = {
     textDecoration: "none",
-    color: linkColor.palette.background.paper,
+    color: linkColor.palette.color.primary,
   };
   return (
     <Box sx={{ marginTop: "20px" }} className="NavBar">
