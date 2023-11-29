@@ -26,7 +26,6 @@ const HomePage = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            height: "30vh",
             mt: "5vh",
             padding: "10px",
             borderRadius: "6px",

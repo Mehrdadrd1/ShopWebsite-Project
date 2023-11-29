@@ -1,21 +1,20 @@
-import { Box, ThemeProvider } from "@mui/material";
+import { Box } from "@mui/material";
 import Layout from "../../Components/Layout/Layout";
 import RegisterForm from "../../Container/RegisterForm/RegisterForm";
-import Theme from "../../Components/Theme/Theme";
 
 const RegisterPage = () => {
   return (
-    <ThemeProvider theme={Theme()}>
-      <Layout>
-        <Box
-          sx={{
-            textAlign: "center",
-          }}
-        >
-          <RegisterForm />
-        </Box>
-      </Layout>
-    </ThemeProvider>
+    <Layout>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <RegisterForm />
+      </Box>
+    </Layout>
   );
 };
 

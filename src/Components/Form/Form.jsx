@@ -1,17 +1,10 @@
-import { FormControl, ThemeProvider } from "@mui/material";
-import Theme from "../Theme/Theme";
+import "./Form.css";
 
 const Form = ({ children, handleSubmit }) => {
   return (
-    <FormControl
-      onSubmit={handleSubmit}
-      sx={{
-        padding: "15px",
-        margin: "10px",
-      }}
-    >
+    <form className="Form" onSubmit={handleSubmit}>
       {children}
-    </FormControl>
+    </form>
   );
 };
 

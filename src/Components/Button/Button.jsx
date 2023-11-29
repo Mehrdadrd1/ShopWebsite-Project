@@ -1,28 +1,23 @@
 import Button from "@mui/material/Button";
-import { ThemeProvider } from "@mui/system";
-import Theme from "../Theme/Theme";
 
-const Buttons = ({ onClick, children, type, id, disabled }) => {
+const Buttons = ({ onClick, children, type, id, disabled, loading }) => {
   return (
-    <ThemeProvider theme={Theme()}>
-      <Button
-        type={type}
-        id={id}
-        disabled={disabled}
-        className="Button"
-        variant="contained"
-        onClick={onClick}
-        sx={{
-          textDecoration: "none",
-          bgcolor: "color.tertiary",
-          ":hover": { bgcolor: "color.scondary" },
-          width: "fit-content",
-          margin: "10px",
-        }}
-      >
-        {children}
-      </Button>
-    </ThemeProvider>
+    <Button
+      type={type}
+      id={id}
+      disabled={disabled}
+      className={`Button ${loading ? "ButtonLoading" : ""}`}
+      variant="contained"
+      onClick={onClick}
+      sx={{
+        textDecoration: "none",
+        width: "fit-content",
+        margin: "10px",
+      }}
+    >
+      {loading && <div className="loading">Loading...</div>}
+      {!loading && children}
+    </Button>
   );
 };
 

@@ -5,11 +5,37 @@ import Input from "../../Components/Input/Input";
 import CheckBox from "../../Components/CheckBox/CheckBox";
 import RegisterUser from "../../api/server/RegisterUser";
 import { Box } from "@mui/material";
+import { useState } from "react";
 
 const RegisterForm = () => {
+  const [formData, setFormData] = useState({
+    name: {
+      value: "",
+      validation: {
+        required: true,
+        minLength: 3,
+      },
+      invalidMessage: "",
+      valid: false,
+    },
+  });
+
   const theme = Theme();
+  const [loading, setLoading] = useState(false);
+
+  const handleChangeInput = (event) => {
+    const [id, value] = event;
+    setFormData({
+      ...formData,
+      [id]: {
+        ...formData[id],
+        value,
+      },
+    });
+  };
 
   const handleSubmit = async (event) => {
+    setLoading(true);
     event.preventDefault();
     let id;
     const data = {
@@ -22,7 +48,9 @@ const RegisterForm = () => {
     };
 
     const response = await RegisterUser(data, id);
-    console.log("Response", response);
+    console.log("Response:", response);
+
+    setLoading(false);
   };
 
   return (
@@ -38,8 +66,15 @@ const RegisterForm = () => {
           bgcolor: theme.palette.color.quaternary,
         }}
       >
-        <Input id="firstName" label="First Name" type="text" />
-        <Input id="lastName" label="Last Name" type="text" />
+        <Input
+          handleChange={handleChangeInput}
+          isvalid={formData.name.valid}
+          invalidMessage={formData.name.invalidMessage}
+          id="firstName"
+          label="First Name"
+          type="name"
+        />
+        <Input id="lastName" label="Last Name" type="name" />
 
         <Input id="email" label="Email" type="email" />
         <Input id="password" label="Password" type="password" />
@@ -52,7 +87,7 @@ const RegisterForm = () => {
           }}
         >
           <CheckBox />
-          <Buttons type="submit" id="submit">
+          <Buttons type="submit" id="submit" loading={loading}>
             Submit
           </Buttons>
         </Box>

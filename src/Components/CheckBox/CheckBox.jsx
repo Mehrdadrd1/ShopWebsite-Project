@@ -4,7 +4,6 @@ import Theme from "../Theme/Theme";
 
 const CheckBox = () => {
   const theme = Theme();
-  const label = { inputProps: { "aria-label": "Checkbox demo" } };
   return (
     <Box
       sx={{
