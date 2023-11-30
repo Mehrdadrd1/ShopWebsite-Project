@@ -24,3 +24,8 @@ img {
 title {
   font-size: medium;
 }
+
+.cardControl {
+  display: flex;
+  flex-direction: row;
+}

@@ -37,8 +37,10 @@ const ProductsPage = () => {
   }
 
   if (products.data) {
-    content = products.data.map((product, key) => (
-      <ProductCard product={product} />
+    content = products.data.map((product) => (
+      <div key={product.id}>
+        <ProductCard product={product} />
+      </div>
     ));
   }
 
