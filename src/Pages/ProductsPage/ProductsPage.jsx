@@ -1,55 +1,53 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Box, Typography } from "@mui/material";
 import Layout from "../../Components/Layout/Layout";
-const ProductsPage = () => {
-  const [products, setProducts] = useState(false);
+import Svgs from "../../SVGs/Svgs";
+import ProductCard from "../../Components/ProductCard/ProductCard";
+import "./ProductsPage.css";
 
-  const fetchProducts = async () => {
-    try {
-      const response = await axios.get("https://fakestoreapi.com/products");
-      const products = response;
-      console.log("Products:", products);
-      setProducts(products);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+const ProductsPage = () => {
+  const url = "https://fakestoreapi.com/products";
+  const [products, setProducts] = useState({
+    loading: false,
+    data: null,
+    error: false,
+  });
 
   useEffect(() => {
-    fetchProducts();
-  }, []);
+    setProducts({ loading: true, data: null, error: false });
+    axios
+      .get(url)
+      .then((response) => {
+        setProducts({ loading: false, data: response.data, error: false });
+      })
+      .catch(() => {
+        setProducts({ loading: false, data: null, error: true });
+      });
+  }, [url]);
+
+  let content = null;
+
+  if (products.error) {
+    content = <p>There Was an error please try again later</p>;
+  }
+
+  if (products.loading) {
+    content = <Svgs></Svgs>;
+  }
+
+  if (products.data) {
+    content = products.data.map((product, key) => (
+      <ProductCard product={product} />
+    ));
+  }
 
   return (
     <Layout>
-      <Box
-        sx={{
-          minHeight: "75vh",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          bgcolor: "color.quaternary",
-        }}
-      >
-        <div className="productsTitle">
-          <Typography variant="h5" mt={2} sx={{ color: "color.primary" }}>
-            <strong>Products</strong>
-          </Typography>
-        </div>
-        <div className="productsCard">
-          <ul className="productCard">
-            <li>
-              <div className="product">
-                <img src="" alt="" />
-              </div>
-            </li>
-            <li>Product 2</li>
-            <li>Product 3</li>
-            <li>Product 4</li>
-            <li>Product 5</li>
-          </ul>
-        </div>
-      </Box>
+      <div className="mainCard">
+        <h1>Products</h1>
+        <div className="Products">{content}</div>
+      </div>
     </Layout>
   );
 };

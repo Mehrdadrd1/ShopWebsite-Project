@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./NavBar.css";
 import { Box } from "@mui/material";
 import Theme from "../Theme/Theme";
+import { FaShoppingCart } from "react-icons/fa";
 
 const NavBar = () => {
   const linkColor = Theme();
@@ -39,7 +40,7 @@ const NavBar = () => {
         <ul>
           <li>
             <Link style={linkStyle} to={`/card`}>
-              Card
+              <FaShoppingCart />
             </Link>
           </li>
         </ul>

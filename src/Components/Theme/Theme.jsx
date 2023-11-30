@@ -21,8 +21,8 @@ const Theme = () => {
 export default Theme;
 
 // colors in palette
-// #eeeeee	(238,238,238)
 // #393646	(57,54,70)
+// #eeeeee	(238,238,238)
 // #443c68	(68,60,104)
 // #576cbc	(87,108,188)
 // #9bc5ef	(155,197,239)

@@ -1,0 +1,21 @@
+.productCard {
+  background-color: #9bc5ef;
+  height: 300px;
+  margin: 5px;
+  border-radius: 6px;
+}
+
+.cardBackground {
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+}
+
+.cardInfoContent {
+  padding: 3px;
+}
+
+title {
+}
