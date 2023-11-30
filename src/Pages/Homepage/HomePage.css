@@ -1,11 +1,21 @@
 .HomePage {
+  min-height: 70vh;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  justify-content: space-around;
   padding: 5px;
-  margin: 10px;
+  margin: 25px;
+  background-color: #576cbc;
 }
 
 .header {
   font-weight: bold;
+}
+
+.bestSeller {
+  display: flex;
+  flex-direction: column;
 }
