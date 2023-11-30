@@ -6,15 +6,11 @@ const ProductCard = (props) => {
   return (
     <div className="productCard">
       <Link to={`/products/${props.product.id}`}>
-        <div
-          className="cardBackground"
-          style={{
-            backgroundImage: `url("${props.product.image}")`,
-            backgroundSize: "cover",
-          }}
-        ></div>
+        <div className="cardImage">
+          <img src={props.product.image} alt="product" />
+        </div>
       </Link>
-      <div className="cardInfoContent">
+      <div className="cardInfo">
         <h3 className="title">{props.product.title}</h3>
         <div className="Price">$ {props.product.price}</div>
       </div>
