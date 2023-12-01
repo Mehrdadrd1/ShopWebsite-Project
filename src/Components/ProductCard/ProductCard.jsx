@@ -2,7 +2,9 @@ import React from "react";
 import "./ProductCard.css";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
+
 const ProductCard = (props) => {
+  const viewPage = () => {};
   return (
     <div className="productCard">
       <Link to={`/products/${props.product.id}`}>
@@ -16,7 +18,7 @@ const ProductCard = (props) => {
       </div>
       <div className="cardControl">
         <Button>ADD TO CARD</Button>
-        <Button>VIEW</Button>
+        <Button onClick={viewPage()}>VIEW</Button>
       </div>
     </div>
   );
