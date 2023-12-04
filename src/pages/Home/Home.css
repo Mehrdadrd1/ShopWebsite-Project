@@ -1,19 +1,26 @@
 .Home {
-  height: 100%;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
-  border-radius: 6px;
+  margin-top: 30px;
+}
+
+.Home .welcom {
+  font-size: 20px;
+  font-weight: 700;
   padding: 5px;
-  background-color: #576cbc;
-  box-shadow: 0px 0px 15px 2px #00000059;
 }
 
-.header {
-  font-weight: bold;
-}
-
-.bestSeller {
+.bestSection {
   display: flex;
   flex-direction: column;
+  justify-self: flex-end;
+  margin-top: 30px;
+}
+
+.btn {
+  display: flex;
+  justify-content: end;
+  margin-top: 10px;
 }

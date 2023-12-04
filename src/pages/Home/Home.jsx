@@ -12,19 +12,22 @@ const Home = () => {
     color: theme.palette.color.primary,
   };
 
+  let content = [];
+  content = <BestSellers />;
+
   return (
     <Layout>
       <div className="Home">
-        <h1 className="header">Welcom to React-FakeShop</h1>
-        <div className="bestSeller">
-          <BestSellers />
-        </div>
-        <div className="btn">
-          <Buttons>
-            <Link style={linkStyle} to={"/products"}>
-              Start Buying...
-            </Link>
-          </Buttons>
+        <p className="welcom">Welcom to React-FakeShop</p>
+        <div className="bestSection">
+          <div className="content">{content}</div>
+          <div className="btn">
+            <Buttons>
+              <Link style={linkStyle} to={"/products"}>
+                Start Buying
+              </Link>
+            </Buttons>
+          </div>
         </div>
       </div>
     </Layout>

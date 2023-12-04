@@ -1,7 +1,33 @@
-.Card {
+.SingleView {
   display: flex;
-  width: 600px;
+  flex-direction: column;
+  margin-top: 30px;
+  background-color: #443c68;
+  max-width: 700px;
+  max-height: 400px;
+  min-height: fit-content;
+  border-radius: 6px;
+  box-shadow: #00000059 0px 0px 15px 2px;
 }
 
 .ProductView {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.cardInfo {
+  padding: 10px;
+  padding-left: 15px;
+}
+
+.category {
+  padding-top: 10px;
+  font-size: large;
+  font-weight: 500;
+}
+
+.descrip {
+  padding-top: 10px;
+  font-size: medium;
 }
