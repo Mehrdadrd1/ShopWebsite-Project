@@ -1,0 +1,27 @@
+.logForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 50px;
+  min-width: 350px;
+  min-height: 380px;
+  background-color: #443c68;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: #00000059 0px 0px 15px 1px;
+}
+
+.logUserData {
+  display: flex;
+  flex-direction: column;
+}
+
+.logControl {
+  margin-left: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}

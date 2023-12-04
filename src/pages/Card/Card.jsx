@@ -2,11 +2,11 @@ import Layout from "../../Components/Layout/Layout";
 
 const Card = () => {
   return (
-    <div className="Card">
-      <Layout>
+    <Layout>
+      <div className="cardPage">
         <p>Card Page!</p>
-      </Layout>
-    </div>
+      </div>
+    </Layout>
   );
 };
 

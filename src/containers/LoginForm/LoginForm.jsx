@@ -3,10 +3,10 @@ import Theme from "../../Components/Theme/Theme";
 import Form from "../../Components/Form/Form";
 import Input from "../../Components/Input/Input";
 import CheckBox from "../../Components/CheckBox/CheckBox";
-import RegisterUser from "../../api/server/RegisterUser";
-import "./RegisterForm.css";
+import LoginUser from "../../api/server/LoginUser";
+import "./LoginForm.css";
 
-const RegisterForm = () => {
+const LoginForm = () => {
   const theme = Theme();
 
   const handleSubmit = async (event) => {
@@ -21,22 +21,19 @@ const RegisterForm = () => {
       rememer: event.target[5].checked,
     };
 
-    const response = await RegisterUser(data, id);
+    const response = await LoginUser(data, id);
     console.log("Response:", response);
   };
 
   return (
     <Form handleSubmit={handleSubmit}>
-      <div className="regForm">
-        <h3>Register</h3>
-        <div className="regUserData">
-          <Input id="firstName" placeholder="First Name" type="name" />
-          <Input id="lastName" placeholder="Last Name" type="name" />
-
+      <div className="logForm">
+        <h3>Login</h3>
+        <div className="logUserData">
           <Input id="email" placeholder="Email" type="email" />
           <Input id="password" placeholder="Password" type="password" />
         </div>
-        <div className="regControl">
+        <div className="logControl">
           <CheckBox />
           <Buttons type="submit" id="submit">
             Submit
@@ -47,4 +44,4 @@ const RegisterForm = () => {
   );
 };
 
-export default RegisterForm;
+export default LoginForm;

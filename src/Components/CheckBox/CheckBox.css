@@ -1,0 +1,15 @@
+.Checkbox {
+  font-size: medium;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
+.Checkbox label {
+  padding: 5px;
+}
+
+input.CheckboxInput {
+  transform: scale(1.3);
+}

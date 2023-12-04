@@ -1,30 +1,13 @@
-import Checkbox from "@mui/material/Checkbox";
-import { Box } from "@mui/material";
 import Theme from "../Theme/Theme";
-
+import "./CheckBox.css";
 const CheckBox = () => {
   const theme = Theme();
+
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
-        mr: "10px",
-      }}
-    >
-      <Checkbox
-        sx={{
-          padding: "0px",
-        }}
-      />
-      <label
-        htmlFor="Checkbox"
-        style={{ color: theme.palette.background.paper }}
-      >
-        Remember ME
-      </label>
-    </Box>
+    <div className="Checkbox">
+      <label htmlFor="rememberMe">Remember ME</label>
+      <input className="CheckboxInput" name="rememberMe" type="checkbox" />
+    </div>
   );
 };
 

@@ -5,15 +5,9 @@ import RegisterForm from "../../containers/RegisterForm/RegisterForm";
 const Register = () => {
   return (
     <Layout>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
+      <div>
         <RegisterForm />
-      </Box>
+      </div>
     </Layout>
   );
 };

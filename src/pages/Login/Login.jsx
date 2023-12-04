@@ -1,10 +1,12 @@
 import Layout from "../../Components/Layout/Layout";
-
+import LoginForm from "../../containers/LoginForm/LoginForm";
 const Login = () => {
   return (
     <div className="Login">
       <Layout>
-        <p>Login Page!</p>
+        <div>
+          <LoginForm />
+        </div>
       </Layout>
     </div>
   );
