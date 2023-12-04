@@ -1,6 +1,6 @@
 import React from "react";
 
-const Svgs = () => {
+const LoadingSvg = () => {
   return (
     <svg
       width="45"
@@ -82,4 +82,4 @@ const Svgs = () => {
   );
 };
 
-export default Svgs;
+export default LoadingSvg;

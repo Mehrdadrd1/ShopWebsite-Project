@@ -2,12 +2,12 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Layout from "../../Components/Layout/Layout";
-import Svgs from "../../SVGs/Svgs";
 import ProductCard from "../../Components/ProductCard/ProductCard";
-import "./ProductsPage.css";
+import "./Products.css";
+import LoadingSvg from "../../svg/LoadingSvg";
 
-const ProductsPage = () => {
-  const url = "https://fakestoreapi.com/products";
+const Products = () => {
+  const url = "https://fakestoreapi.com/products?limit=8";
   const [products, setProducts] = useState({
     loading: false,
     data: null,
@@ -33,12 +33,12 @@ const ProductsPage = () => {
   }
 
   if (products.loading) {
-    content = <Svgs></Svgs>;
+    content = <LoadingSvg></LoadingSvg>;
   }
 
   if (products.data) {
     content = products.data.map((product) => (
-      <div key={product.id}>
+      <div className="" key={product.id}>
         <ProductCard product={product} />
       </div>
     ));
@@ -54,4 +54,4 @@ const ProductsPage = () => {
   );
 };
 
-export default ProductsPage;
+export default Products;

@@ -10,6 +10,7 @@ const Footer = () => {
         justifyContent: "space-between",
         padding: "5px",
         bgcolor: theme.palette.color.scondary,
+        boxShadow: "#00000059 0px -5px 15px 2px",
       }}
     >
       <Typography sx={{}} variant="button" display="block" gutterBottom>

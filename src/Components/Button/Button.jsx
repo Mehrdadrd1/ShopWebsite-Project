@@ -6,17 +6,17 @@ const Buttons = ({ onClick, children, type, id, disabled, loading }) => {
       type={type}
       id={id}
       disabled={disabled}
-      className={`Button ${loading ? "ButtonLoading" : ""}`}
+      className={children}
       variant="contained"
       onClick={onClick}
       sx={{
         textDecoration: "none",
         width: "fit-content",
+        height: "fit-content",
         margin: "10px",
       }}
     >
-      {loading && <div className="loading">Loading...</div>}
-      {!loading && children}
+      {children}
     </Button>
   );
 };

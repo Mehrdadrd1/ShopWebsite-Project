@@ -4,6 +4,10 @@
   align-items: center;
 }
 
+.mainCard h1 {
+  margin: 10px;
+}
+
 .Products {
   display: flex;
   flex-direction: row;

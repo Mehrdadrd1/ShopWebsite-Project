@@ -1,36 +1,35 @@
 import { createBrowserRouter } from "react-router-dom";
-import HomePage from "../../Pages/Homepage/Homepage";
-import ProductsPage from "../../Pages/ProductsPage/ProductsPage";
-import LoginPage from "../../Pages/LoginPage/LoginPage";
-import RegisterPage from "../../Pages/RegisterPage/RegisterPage";
-import CardPage from "../../Pages/CardPage/CardPage";
-import ProductView from "../ProductView/ProductView";
-
+import Home from "../../pages/Home/Home";
+import Products from "../../pages/Products/Products";
+import Login from "../../pages/Login/Login";
+import Register from "../../pages/Register/Register";
+import Card from "../../pages/Card/Card";
+import SingleProduct from "../../pages/SingleProduct/SingleProduct";
 const Pages = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <HomePage />,
+      element: <Home />,
     },
     {
       path: "/products",
-      element: <ProductsPage />,
+      element: <Products />,
+    },
+    {
+      path: "/products/:productId",
+      element: <SingleProduct />,
     },
     {
       path: "/login",
-      element: <LoginPage />,
+      element: <Login />,
     },
     {
       path: "/register",
-      element: <RegisterPage />,
+      element: <Register />,
     },
     {
       path: "/card",
-      element: <CardPage />,
-    },
-    {
-      path: "/products/product-view",
-      element: <ProductView />,
+      element: <Card />,
     },
   ]);
 

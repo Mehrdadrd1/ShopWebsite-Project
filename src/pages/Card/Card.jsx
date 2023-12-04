@@ -1,13 +1,13 @@
 import Layout from "../../Components/Layout/Layout";
 
-const LoginPage = () => {
+const Card = () => {
   return (
-    <div className="LoginPage">
+    <div className="Card">
       <Layout>
-        <p>Login Page!</p>
+        <p>Card Page!</p>
       </Layout>
     </div>
   );
 };
 
-export default LoginPage;
+export default Card;

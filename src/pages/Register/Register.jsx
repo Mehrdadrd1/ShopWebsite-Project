@@ -1,8 +1,8 @@
 import { Box } from "@mui/material";
 import Layout from "../../Components/Layout/Layout";
-import RegisterForm from "../../Container/RegisterForm/RegisterForm";
+import RegisterForm from "../../containers/RegisterForm/RegisterForm";
 
-const RegisterPage = () => {
+const Register = () => {
   return (
     <Layout>
       <Box
@@ -18,4 +18,4 @@ const RegisterPage = () => {
   );
 };
 
-export default RegisterPage;
+export default Register;

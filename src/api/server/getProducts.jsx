@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import "./BestSellers.css";
+import "./getProducts.css";
 import axios from "axios";
 import LoadingSvg from "../../svg/LoadingSvg";
 import ProductCard from "../ProductCard/ProductCard";
 
-const BestSellers = () => {
+const getProducts = () => {
   const url = "https://fakestoreapi.com/products";
   const [products, setproducts] = useState(null);
   const [getData, setGetData] = useState({
@@ -29,26 +29,16 @@ const BestSellers = () => {
   let content = null;
 
   if (getData.error) {
-    content = <p>There Was an error please try again later</p>;
+    return <p>There Was an error please try again later</p>;
   }
 
   if (getData.loading) {
-    content = <LoadingSvg></LoadingSvg>;
+    return <LoadingSvg></LoadingSvg>;
   }
 
   if (getData.data) {
-    let threeBestPproducts = [];
-    threeBestPproducts.push(products[6]);
-    threeBestPproducts.push(products[12]);
-
-    content = threeBestPproducts.map((product) => (
-      <div key={product.id}>
-        <ProductCard product={product} />
-      </div>
-    ));
+    return products;
   }
-
-  return <div className="BestSeller">{content}</div>;
 };
 
-export default BestSellers;
+export default getProducts;
