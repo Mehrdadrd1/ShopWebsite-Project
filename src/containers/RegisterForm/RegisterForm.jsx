@@ -1,5 +1,4 @@
 import Buttons from "../../Components/Button/Button";
-import Theme from "../../Components/Theme/Theme";
 import Form from "../../Components/Form/Form";
 import Input from "../../Components/Input/Input";
 import CheckBox from "../../Components/CheckBox/CheckBox";
@@ -7,8 +6,6 @@ import RegisterUser from "../../api/server/RegisterUser";
 import "./RegisterForm.css";
 
 const RegisterForm = () => {
-  const theme = Theme();
-
   const handleSubmit = async (event) => {
     event.preventDefault();
     let id;

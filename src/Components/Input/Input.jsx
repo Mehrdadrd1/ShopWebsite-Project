@@ -1,5 +1,3 @@
-import { Box, TextField } from "@mui/material";
-import Theme from "../Theme/Theme";
 import "./Input.css";
 
 const Input = ({
@@ -10,8 +8,6 @@ const Input = ({
   invalidMessage,
   handleChange,
 }) => {
-  const theme = Theme();
-
   return (
     <div className="inputDiv">
       <input className="Input" id={id} placeholder={placeholder} type={type} />

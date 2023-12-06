@@ -1,4 +1,3 @@
-import { Box } from "@mui/material";
 import Layout from "../../Components/Layout/Layout";
 import RegisterForm from "../../containers/RegisterForm/RegisterForm";
 

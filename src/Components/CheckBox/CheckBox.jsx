@@ -1,8 +1,5 @@
-import Theme from "../Theme/Theme";
 import "./CheckBox.css";
 const CheckBox = () => {
-  const theme = Theme();
-
   return (
     <div className="Checkbox">
       <label htmlFor="rememberMe">Remember ME</label>
