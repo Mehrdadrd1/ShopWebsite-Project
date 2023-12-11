@@ -1,22 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./Components/App/App";
-import { ThemeProvider } from "@mui/system";
+import App from "./App/App";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
 import Theme from "../src/Components/Theme/Theme";
-import { Box } from "@mui/material";
+import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const theme = Theme();
 root.render(
-  <ThemeProvider theme={Theme()}>
-    <Box
-      sx={{
-        bgcolor: theme.palette.background.paper,
-        color: theme.palette.color.primary,
-      }}
-    >
+  <div
+    style={{
+      backgroundColor: theme.palette.background.paper,
+      color: theme.palette.color.primary,
+    }}
+  >
+    <Provider store={store}>
       <App />
-    </Box>
-  </ThemeProvider>
+    </Provider>
+  </div>
 );

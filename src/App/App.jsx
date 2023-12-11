@@ -1,8 +1,8 @@
 import { RouterProvider } from "react-router-dom";
-import Pages from "../Router/Router";
+import Pages from "../Components/Router/Router";
 
-function App() {
+const App = () => {
   return <RouterProvider router={Pages()} />;
-}
+};
 
 export default App;

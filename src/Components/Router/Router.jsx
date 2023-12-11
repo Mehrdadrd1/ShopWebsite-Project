@@ -3,7 +3,7 @@ import Home from "../../pages/Home/Home";
 import Products from "../../pages/Products/Products";
 import Login from "../../pages/Login/Login";
 import Register from "../../pages/Register/Register";
-import Card from "../../pages/Card/Card";
+import Cart from "../../pages/Cart/Cart";
 import SingleProduct from "../../pages/SingleProduct/SingleProduct";
 const Pages = () => {
   const router = createBrowserRouter([
@@ -28,8 +28,8 @@ const Pages = () => {
       element: <Register />,
     },
     {
-      path: "/card",
-      element: <Card />,
+      path: "/cart",
+      element: <Cart />,
     },
   ]);
 

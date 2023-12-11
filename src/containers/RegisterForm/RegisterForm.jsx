@@ -1,21 +1,26 @@
 import Buttons from "../../Components/Button/Button";
 import Form from "../../Components/Form/Form";
 import Input from "../../Components/Input/Input";
-import CheckBox from "../../Components/CheckBox/CheckBox";
-import RegisterUser from "../../api/server/RegisterUser";
+import RegisterUser from "../../api/RegisterUser";
+import { Link } from "react-router-dom";
+import Theme from "../../Components/Theme/Theme";
 import "./RegisterForm.css";
 
 const RegisterForm = () => {
+  const linkColor = Theme();
+  const linkStyle = {
+    textDecoration: "none",
+    color: linkColor.palette.color.primary,
+  };
   const handleSubmit = async (event) => {
     event.preventDefault();
     let id;
     const data = {
       id: id,
-      firstName: event.target[0].value,
-      LastName: event.target[1].value,
-      email: event.target[2].value,
-      password: event.target[3].value,
-      rememer: event.target[5].checked,
+      name: event.target[0].value,
+      email: event.target[1].value,
+      password: event.target[2].value,
+      rememer: event.target[4].checked,
     };
 
     const response = await RegisterUser(data, id);
@@ -25,18 +30,20 @@ const RegisterForm = () => {
   return (
     <Form handleSubmit={handleSubmit}>
       <div className="regForm">
-        <h3>Register</h3>
+        <h3>Sign Up</h3>
         <div className="regUserData">
-          <Input id="firstName" placeholder="First Name" type="name" />
-          <Input id="lastName" placeholder="Last Name" type="name" />
-
+          <Input id="firstName" placeholder="Full Name" type="name" />
           <Input id="email" placeholder="Email" type="email" />
           <Input id="password" placeholder="Password" type="password" />
         </div>
         <div className="regControl">
-          <CheckBox />
           <Buttons type="submit" id="submit">
-            Submit
+            <Link style={linkStyle} to={"/login"}>
+              Login
+            </Link>
+          </Buttons>
+          <Buttons type="submit" id="submit">
+            Sign Up
           </Buttons>
         </div>
       </div>
